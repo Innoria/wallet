@@ -15,5 +15,5 @@
 var module = angular.module("OpenchainWallet.Models");
 
 module.value("settings", {
-    httpRedirect: "http://nossl.wallet.openchain.org/"
+    httpRedirect: "http://localhost:8080/"
 });

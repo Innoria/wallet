@@ -40,7 +40,7 @@ module.controller("AddEndpointController", function ($scope, $rootScope, $locati
             return;
         }
 
-        endpoint.loadEndpointInfo().then(function (result) {
+        return endpoint.loadEndpointInfo().then(function (result) {
             $scope.endpoint = result;
 
             if (!result.properties.validatorUrl) {
@@ -66,4 +66,6 @@ module.controller("AddEndpointController", function ($scope, $rootScope, $locati
         endpointManager.addEndpoint($scope.endpoint);
         $location.path("/");
     };
+    
+    $scope.endpointUrl = 'http://ico.innoria.com/';
 });
